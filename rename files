@@ -1,0 +1,10 @@
+import os
+
+def rename_files(directory, prefix):
+    for filename in os.listdir(directory):
+        if os.path.isfile(os.path.join(directory, filename)):
+            new_name = prefix + filename
+            os.rename(os.path.join(directory, filename), os.path.join(directory, new_name))
+
+# Example usage
+rename_files("d:\A_Irish\Completion Documents\SSV Reports", "PHXXXXXXX-")
